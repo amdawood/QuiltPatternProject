@@ -53,12 +53,12 @@ namespace QuiltPatternProject
                     tempS.Side1 = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Please enter the color of the square: ");
                     tempS.Color = Console.ReadLine();
-                    tempS.Name = "Square";
                     Console.WriteLine($"The Area of the Square is: " + tempS.GetArea());
                     
                     shapes.Add(new Square(tempS.Side1, tempS.Color));
 
-                }else if(userInput1 == "R")
+                }
+                else if(userInput1 == "R")
                 {
                     Rectangle tempR = new Rectangle();
                     Console.WriteLine("Please enter the side 1 of the rectangle: ");
@@ -70,6 +70,21 @@ namespace QuiltPatternProject
                     Console.WriteLine($"The Area of the Rectangle is: " + tempR.GetArea());
 
                     shapes.Add(new Rectangle(tempR.Side1, tempR.Side2, tempR.Color));
+
+                }else if(userInput1 == "T")
+                {
+                    Triangle tempT = new Triangle();
+                    Console.WriteLine("Please enter the side 1 of the triangle: ");
+                    tempT.Side1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter the side 2 of the triangle: ");
+                    tempT.Side2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter the side 3 of the triangle: ");
+                    tempT.Side3 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter the color of the triangle: ");
+                    tempT.Color = Console.ReadLine();
+                    Console.WriteLine($"The Area of the Triangle is: " + tempT.GetArea());
+
+                    shapes.Add(new Triangle(tempT.Side1, tempT.Side2, tempT.Side3, tempT.Color));
 
                 }
 
