@@ -65,6 +65,7 @@ namespace QuiltPatternProject
 
             foreach (Shape s in shapes)
             {
+
                 s.GetInfo();
                 Console.WriteLine($"The " + s.Name + " has an area of " + s.GetArea() + "\n");
             }
