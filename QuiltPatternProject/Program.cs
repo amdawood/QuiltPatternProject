@@ -105,13 +105,6 @@ namespace QuiltPatternProject
 
             }
 
-            
-
-    }
-
-        private static object Square()
-        {
-            throw new NotImplementedException();
         }
     }
 }

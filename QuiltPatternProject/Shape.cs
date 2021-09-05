@@ -12,8 +12,8 @@ namespace QuiltPatternProject
         public string Color { get; set; }
         public virtual void GetInfo()
         {
-            Console.WriteLine($"\n**This is a {Name}");
-            Console.WriteLine($"**The color of the shape is {Color}");
+            Console.WriteLine($"\nThis is a {Name}");
+            Console.WriteLine($"The color of the shape is {Color}");
         }
 
         public abstract int GetArea();
