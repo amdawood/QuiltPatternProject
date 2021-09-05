@@ -58,6 +58,19 @@ namespace QuiltPatternProject
                     
                     shapes.Add(new Square(tempS.Side1, tempS.Color));
 
+                }else if(userInput1 == "R")
+                {
+                    Rectangle tempR = new Rectangle();
+                    Console.WriteLine("Please enter the side 1 of the rectangle: ");
+                    tempR.Side1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter the side 2 of the rectangle: ");
+                    tempR.Side2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter the color of the rectangle: ");
+                    tempR.Color = Console.ReadLine();
+                    Console.WriteLine($"The Area of the Rectangle is: " + tempR.GetArea());
+
+                    shapes.Add(new Rectangle(tempR.Side1, tempR.Side2, tempR.Color));
+
                 }
 
 
