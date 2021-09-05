@@ -8,12 +8,15 @@ namespace QuiltPatternProject
 {
     public abstract class Shape
     {
-        string name = "Shape Name";
-        string color = "Shape Color";
-
-        public decimal GetArea(decimal area)
+        public string Name { get; set; }
+        public string Color { get; set; }
+        public virtual void GetInfo()
         {
-            return area;
+            Console.WriteLine($"\n**This is a {Name}");
+            Console.WriteLine($"**The color of the shape is {Color}");
         }
+
+        public abstract int GetArea();
+
     }
 }
