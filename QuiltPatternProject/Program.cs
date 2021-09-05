@@ -36,13 +36,14 @@ namespace QuiltPatternProject
                 Console.ForegroundColor = ConsoleColor.White;
             }
             
-            while(userInput1 != "L")
+            while(userInput1 != "Q")
             {
                 Console.WriteLine("\n--Please Pick a Shape You Would Like to Add--");
                 Console.WriteLine("S) Add a square");
                 Console.WriteLine("R) Add a rectangle");
                 Console.WriteLine("T) Add a triangle");
                 Console.WriteLine("L) List shapes");
+                Console.WriteLine("Q) Quit");
                 userInput1 = Console.ReadLine();
 
                 if (userInput1 == "S")
@@ -87,16 +88,24 @@ namespace QuiltPatternProject
                     shapes.Add(new Triangle(tempT.Side1, tempT.Side2, tempT.Side3, tempT.Color));
 
                 }
+                else if(userInput1 == "L")
+                {
+                    foreach (Shape s in shapes)
+                    {
+
+                        s.GetInfo();
+                        Console.WriteLine($"The " + s.Name + " has an area of " + s.GetArea() + "\n");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("***Please select one of the correct options***");
+                }
 
 
             }
 
-            foreach (Shape s in shapes)
-            {
-
-                s.GetInfo();
-                Console.WriteLine($"The " + s.Name + " has an area of " + s.GetArea() + "\n");
-            }
+            
 
     }
 
