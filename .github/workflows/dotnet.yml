@@ -23,6 +23,9 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+
     - name: install git-conventional-commits
       run: npm install --global git-conventional-commits
+    - name: validate commits message
+      run: git-conventional-commits commit-msg-hook git-conventional-commits.json
       
