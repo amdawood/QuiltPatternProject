@@ -2,7 +2,7 @@ next-version: 0
 assembly-versioning-scheme: MajorMinorPatch
 assembly-file-versioning-scheme: MajorMinorPatchTag
 mode: MainLine
-increment: Inherit
+increment: Patch
 continuous-delivery-fallback-tag: ci
 tag-prefix: '[vV]'
 major-version-bump-message: '\+semver:\s?(breaking|major)'
