@@ -16,3 +16,15 @@ commit-message-incrementing: Enabled
 commit-date-format: 'yyyy-MM-dd'
 ignore:
   sha: []
+branches:
+  main:
+    regex: ^master$|^main$
+    mode: ContinuousDelivery
+    tag: ''
+    increment: Patch
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: false
+    is-mainline: true
+    pre-release-weight: 55000
